@@ -1,6 +1,4 @@
 var slides = document.querySelectorAll("#slides > img");
-var prev = document.getElementById("prev");
-var next = document.getElementById("next");
 var current = 0;
 
 showSlides();
@@ -14,5 +12,5 @@ function showSlides() {
   if(current > slides.length)
     current = 1;
   slides[current - 1].style.display = "block";
-  setTimeout(showSlides, 200000);
+  setTimeout(showSlides,5000);
 }

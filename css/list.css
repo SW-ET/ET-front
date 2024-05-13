@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+
+/* 필요 있나..? */
+
+* {
+  margin:0;   /* 마진 리셋 */
+  padding:0;   /* 패딩 리셋 */
+  box-sizing: border-box;   /* 박스 영역은 테두리까지 */ 
+}
+a {
+  text-decoration:none;  /* 텍스트 링크 밑줄 없애기 */ 
+}
+ul {
+  list-style: none;
+}
+
+#pageTitle h2{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+hr{
+    border: none; /* 기본 테두리를 제거합니다 */
+    border-top: 1px solid #ccc; /* 상단 테두리를 추가하고 색상을 지정합니다*/
+}
+
+
+
+/**************************************/
+/*           콘텐츠 영역               */
+/**************************************/
+
+#contents{  
+  width:100%;   /* 너비 */
+  height:auto;  /* 높이: 푸터 전까지 */   
+}
+
+
+.review_list{
+  margin-top: 40px;
+}
+
+
+/*************************/
+/*    페이지 네비게이션   */
+/*************************/
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+.pagination a {
+  display: inline;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+.pagination a:hover {
+  background-color: #f2f2f2;
+}
+.pagination .previous,
+.pagination .next {
+  font-weight: bold;
+}

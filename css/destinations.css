@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap');
+
+* {
+  margin:0;   /* 마진 리셋 */
+  padding:0;   /* 패딩 리셋 */
+  box-sizing: border-box;   /* 박스 영역은 테두리까지 */ 
+}
+a {
+  text-decoration:none;  /* 텍스트 링크 밑줄 없애기 */ 
+}
+ul {
+  list-style: none;
+}
+
+#pageTitle h2{
+    margin-top: 10px;
+    margin-left: 50px;
+}
+hr{
+    margin-top: 5px;
+    border: none; /* 기본 테두리를 제거합니다 */
+    border-top: 1px solid #ccc; /* 상단 테두리를 추가하고 색상을 지정합니다*/
+}
+
+/**************************************/
+/*           콘텐츠 영역               */
+/**************************************/
+
+#contents{  
+  width:100%;   /* 너비 */
+  height:auto;  /* 높이: 푸터 전까지 */   
+}
+
+
+/******************************/
+/*   목록테이블(table 태그)    */
+/******************************/
+
+table {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px; /* 적용 안 됨 */
+  border-collapse: collapse;
+}
+th, td{
+  text-align: left;
+  padding: 8px;
+}
+td {
+  border: 0px solid #dddddd;  /* 1px */
+}
+
+thead{
+    border-bottom : 1px dotted #ccc;
+}
+
+/***********************/
+/*   방문지 목록 찜     */
+/***********************/
+input[type=checkbox] { display:none; }
+input[type=checkbox] + label {
+  display: block;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background: url('/site-result/images/before-heart.png') left/22px no-repeat;
+  background-color: none;
+}
+input[type=checkbox]:checked + label { background-image: url('/site-result/images/after-heart.png'); }
+
+/*************************/
+/*    페이지 네비게이션   */
+/*************************/
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.pagination a {
+  display: inline;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+.pagination a:hover {
+  background-color: #f2f2f2;
+}
+.pagination .previous,
+.pagination .next {
+  font-weight: bold;
+}
