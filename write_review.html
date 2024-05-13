@@ -13,10 +13,14 @@
         <h2>리뷰 작성하기</h2>
         <hr>
     </div>
-    <div id="review">
-        <textarea class="title" placeholder="리뷰 제목을 작성해주세요." ></textarea>
+    <form id="review">
+        <textarea class="title" placeholder="리뷰 제목을 작성해주세요." required></textarea>
         <!-- 지역 선택, 상의 후 변경하기-->
-        <textarea class="region" placeholder="지역명을 입력해주세요" ></textarea> 
+        <div id="region-container">
+            <textarea class="region" placeholder="지역명을 입력해주세요(권)" required></textarea>
+            <textarea class="subregion" placeholder="지역명을 입력해주세요(시/도)" required></textarea> 
+        </div>
+        
         
         <div class ="star_rating">
             <span class="star on" value="1"> </span>
@@ -26,10 +30,10 @@
             <span class="star" value="5"> </span>
         </div>
         <input type="file" id="fileInput" style="display: none;">
-        <button id="insert_img" onclick="openFilePicker()">이미지 첨부하기</button>
-        <textarea class="article" placeholder="리뷰 내용을 작성해주세요." ></textarea>
+        <button id="fileUpload" onclick="openFilePicker()">이미지 첨부하기</button>
+        <textarea class="article" placeholder="리뷰 내용을 작성해주세요." required></textarea>
         <button class="submit" type="submit">리뷰 등록</button>
-    </div>
+    </form>
     <div id="footer"></div>
     <script>
         $(function(){
@@ -41,3 +45,5 @@
     <script src="js/insert_img.js"></script>
 </body>
 </html>
+
+<!-- star 이미지 업로드 x - 클릭은 됨 -->
