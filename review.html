@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리뷰 상세보기</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/review.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div id="first-container"> <!-- 왼쪽: 지역, 오른쪽: 삭제 버튼 -->
+        <p id="region">수도권 / 경기도</p> <!-- 나중에 변경하기 -->
+        <input type="button" id="delete" value="삭제하기"/> <!-- 로그인한 사용자만 볼 수 있게 하기 -->
+    </div>
+    <div id="second-container"> <!-- 중간: 리뷰 제목, 오른쪽: 찜버튼 -->
+        <div id="review_title">어디 방문 후기</div>
+        <div id="heart">
+            <input type="checkbox" id="box1"><label for="box1"></label>
+        </div>
+    </div>
+    <input type="image" id="review_image" src="" /> <!-- 아마 js로 불러와야 할 듯 -->
+    <div id="third-container"> <!-- 왼쪽: 사용자 아이디, 오른쪽: 가장 최근 수정일(작성일) -->
+        <div id="user_id">사용자 아이디</div> <!-- 나중에 변경하기-->
+        <div id="post_time">작성일(수정일)</div> <!-- 나중에 변경하기-->
+    </div>
+    <p id="forth-container" name="review_text">리뷰 내용</p>
+    <div id="fifth-container"> <!-- 리뷰 좋아요/싫어요 -->
+        <div class="like">
+            <input type="checkbox" id="box2"><label for="box2"></label>
+            <p>10</p> <!-- 좋아요 수, 추후 변경 -->
+        </div>
+        <div class="dislike">
+            <input type="checkbox" id="box3"><label for="box3"></label>
+            <p>10</p> <!-- 싫어요 수, 추후 변경 -->
+        </div>
+    </div>
+    <div id="sixth-container">댓글 영역</div>
+    <div id="footer"></div>
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</body>
+</html>

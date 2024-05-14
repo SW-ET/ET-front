@@ -1,0 +1,121 @@
+body {
+    margin: 0; /* 페이지의 기본 여백 제거 */
+    padding: 0; /* 페이지의 기본 여백 제거 */
+}
+#first-container, #second-container, #third-container, #forth-container, #fifth-container {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid blue;
+    display: inline-block;
+}
+/* 1. first-container 지역, 삭제버튼 */
+#first-container{ 
+    margin-top: 20px;
+    align-items: center; /* 요소들을 세로 방향으로 중앙 정렬, 안 먹음 */
+}
+#first-container p {
+    float: left;
+    margin-left: 10%;
+}
+
+#first-container input[type="button"] {
+    float: right;
+    margin-right: 10%;
+    background-color: #d1d1d1;
+    border: none;
+    padding:2px 13px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* 2. second-container 리뷰 제목, 찜버튼, 수정하기 */
+#second-container {
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+}
+
+#second-container #review_title {
+    flex: 1; /* 남은 공간을 모두 차지하도록 함 */
+    text-align: center; /* 가운데 정렬 */
+    margin-left: 10%;
+}
+
+#second-container #heart {
+    margin-left: auto; /* review_title 오른쪽으로 이동 */
+    margin-right: 10%;
+}
+#second-container input[type=checkbox] { 
+  display:none;
+}
+#second-container input[type=checkbox] + label {
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: url('/images/before-heart.png') left/40px no-repeat;
+  background-color: none;
+}
+#second-container input[type=checkbox]:checked + label { background-image: url('/images/after-heart.png'); }
+
+/* 사용자 등록 이미지 */
+#review_image{
+    float: center; /* 안 먹음 */
+}
+/* 3. third-container 작성자 아이디, 작성일 */
+#third-container div {
+    display: inline-block; /* 두 태그가 나란히 놓이도록 설정 */
+}
+#third-container #user_id{
+    float: left;
+    margin-left: 10%;
+}
+#third-container #post_time{
+    float: right;
+    margin-right: 10%;
+}
+/* 4. third-container 작성자 아이디, 작성일 */
+#forth-container{
+    float: center; /* 왜 안 되지 <-컨테이너 자체 외치이므로 안 됨, width 줄이기 */
+}
+
+/* 5. fifth-container 좋아요, 싫어요 */
+#fifth-container {
+    display: flex;
+    justify-content: center; /* 요소들을 가로로 중앙 정렬 */
+}
+
+#fifth-container > div { /* 이 부분도 나중에 width 줄여서 가운데로 float 하기 */
+    display: flex; /* 각 div 요소 안의 요소들을 가로로 나란히 정렬하기 위해 Flexbox 사용 */
+    align-items: center; /* 요소들을 세로 방향으로 중앙 정렬 */
+    margin-right: 50px; /* 각 div 요소들 간의 간격 조절 */
+}
+
+#fifth-container > div:last-child {
+    margin-right: 0; /* 마지막 div 요소의 오른쪽 여백 제거 */
+}
+#fifth-container .like input[type=checkbox] { 
+    display:none;
+}
+  #fifth-container .like input[type=checkbox] + label {
+    display: block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url('/images/before_like.png') left/40px no-repeat;
+    background-color: none;
+  }
+#fifth-container .like input[type=checkbox]:checked + label { background-image: url('/images/after_like.png'); }
+#fifth-container .dislike input[type=checkbox] { 
+    display:none;
+  }
+  #fifth-container .dislike input[type=checkbox] + label {
+    display: block;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: url('/images/before_dislike.png') left/40px no-repeat;
+    background-color: none;
+  }
+  #fifth-container .dislike input[type=checkbox]:checked + label { background-image: url('/images/after_dislike.png'); }
+
