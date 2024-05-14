@@ -25,7 +25,7 @@ footer{
   align-items: center; /* 요소들을 수직 가운데로 정렬합니다. */ 
   width:100%;   /* 너비 */
   height:80px;  /* 높이 */
-  border-top:1px solid #b8b8b8;
+  border-top:1px solid #b8b8b8; /* 나중에 지우기 */
   position: relative;
   bottom: 0;
   }

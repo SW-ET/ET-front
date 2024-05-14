@@ -13,15 +13,14 @@
         <h2>리뷰 작성하기</h2>
         <hr>
     </div>
-    <form id="review">
+    <form id="review" action='http://localhost:./upload' method='post' enctype="multipart/form-data">
         <textarea class="title" placeholder="리뷰 제목을 작성해주세요." required></textarea>
-        <!-- 지역 선택, 상의 후 변경하기-->
+        <!-- 지역 선택(입력), 상의 후 변경하기-->
         <div id="region-container">
             <textarea class="region" placeholder="지역명을 입력해주세요(권)" required></textarea>
             <textarea class="subregion" placeholder="지역명을 입력해주세요(시/도)" required></textarea> 
         </div>
-        
-        
+        <!-- 평점 -->
         <div class ="star_rating">
             <span class="star on" value="1"> </span>
             <span class="star" value="2"> </span>
@@ -29,9 +28,13 @@
             <span class="star" value="4"> </span>
             <span class="star" value="5"> </span>
         </div>
-        <input type="file" id="fileInput" style="display: none;">
-        <button id="fileUpload" onclick="openFilePicker()">이미지 첨부하기</button>
+        <!-- 사진 업로드 -->
+        <input type='file' id="file_choose" name='userfile[]' onchange="previewImage()" />
+        <img id="preview_img" src="" alt="미리보기"/>
+        
+        <!-- 내용 작성 -->
         <textarea class="article" placeholder="리뷰 내용을 작성해주세요." required></textarea>
+        <!-- 제출 -->
         <button class="submit" type="submit">리뷰 등록</button>
     </form>
     <div id="footer"></div>
@@ -42,8 +45,6 @@
         });
     </script>
     <script src="js/make_rank.js"></script>
-    <script src="js/insert_img.js"></script>
+    <script src="js/preview_img.js"></script>
 </body>
 </html>
-
-<!-- star 이미지 업로드 x - 클릭은 됨 -->

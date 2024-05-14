@@ -6,28 +6,27 @@ hr{
     border: none; /* 기본 테두리를 제거합니다 */
     border-top: 1px solid #ccc; /* 상단 테두리를 추가하고 색상을 지정합니다*/
 }
-#review .star_rating{
-    display: flex;
-    justify-content: center; /* 요소를 수평 가운데로 정렬합니다. */
-    align-items: center; /* 요소를 수직 가운데로 정렬합니다. */
-    flex-direction: row;
-}
 #review {
     display: flex;
     justify-content: center; /* 요소를 수평 가운데로 정렬합니다. */
     align-items: center; /* 요소를 수직 가운데로 정렬합니다. */
     flex-direction: column;
 }
-
+#review .star_rating{ /* 별을 가운데로 정렬하려면 #review가 있어야 함 */
+    display: flex;
+    justify-content: center; /* 요소를 수평 가운데로 정렬합니다. */
+    align-items: center; /* 요소를 수직 가운데로 정렬합니다. */
+    flex-direction: row;
+}
 /* 평점(별) 스타일 */
 .star_rating {
+    margin-top: 10px;
     width: 100%; 
     box-sizing: border-box; 
     display: flex; 
     justify-content: center;
     flex-direction: row; 
     justify-content: flex-start;
-    margin-bottom: 10px;;
   }
 .star_rating .star {
     width: 25px; 
@@ -102,10 +101,24 @@ hr{
     resize: none;
     padding: 15px;
   }
-/* 이미지 파일 로드 버튼 */
-#fileUpload{
+/* 이미지 처리 */
+#file_choose{
+    width: auto;
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 15px 0;
+    background: #F3F4F8;
+    border: 0;
+    border-radius: 10px;
+    height: auto;
+    resize: none;
     padding: 5px;
-    cursor: pointer;
+}
+img[src=""] {
+    display: none;
+}
+#preview_img{
+    max-width: 30%;;
 }
 /* 리뷰 등록 버튼 */
 .submit{
