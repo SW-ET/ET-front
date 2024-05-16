@@ -6,7 +6,7 @@ hr{
     border: none; /* 기본 테두리를 제거합니다 */
     border-top: 1px solid #ccc; /* 상단 테두리를 추가하고 색상을 지정합니다*/
 }
-#joinForm {
+#registrationForm {
     margin-top: 40px;
     margin-left: 20%;
     height: 600px;
@@ -27,7 +27,7 @@ select {
 }
 
 /* 중복검사, 이메일 인증 버튼 */
-#joinForm .form-group .id_check, .email_check{
+#registrationForm .form-group .id_check, .email_check{
     background-color: #d1d1d1;
     border: none;
     padding:5px 13px;

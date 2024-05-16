@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Register Page</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="css/join.css"></script>
+    <link rel="stylesheet" href="css/register.css"></script>
 </head>
 <body>
     <div id="header"></div>
@@ -14,13 +14,13 @@
         <hr>
     </div>
     
-    <form id="joinForm" action="login.php" method="POST">
-        <div class="form-group"> <!-- 이름 입력 -->
+    <form id="registrationForm" action="login.php" method="POST">
+        <div class="form-group"> <!-- 닉네임 입력 -->
             <input type="text" id="userName" name="userName" placeholder="이름 입력" required>
         </div>
         <div class="form-group"> <!-- 아이디 입력, 중복 검사 -->
             <input type="text" id="userid" name="userid" placeholder="아이디 입력" required>
-            <input type="button" class="id_check" onclick="id_check()" value="아이디 중복검사">
+            <input type="button" class="id_check" onclick="checkUserId()" value="아이디 중복검사">
         </div>
         <div class="form-group"> <!-- 비밀번호 입력 -->
             <input type="password" id="userPassword" name="userPassword" placeholder="비밀번호 입력" required>
@@ -28,11 +28,11 @@
         <div class="form-group"> <!-- 비밀번호 확인 -->
             <input type="password" id="userPassword" name="userPassword" placeholder="비밀번호 확인" required>
         </div>
-        <div class="form-group"> <!-- 이메일 입력, 중복 검사 -->
+<!--        <div class="form-group">  이메일 입력, 중복 검사 
             <input type="text" id="userEmail" name="userEmail" placeholder="이메일 입력" required>
             <input type="button" class="email_check" onclick="EmailController()" value="인증 확인">
         </div>
-        <div class="form-group"> <!-- 유입경로 선택 -->
+    <div class="form-group">  유입경로 선택 
             <p>선택사항</p>
             <select name="select_come" id="select_come">
                 <option disabled selected>유입경로</option>
@@ -42,8 +42,8 @@
                 <option value=".">.</option>
                 <option value=".">.</option>
             </select>
-        </div>
-        <button type="submit" id="submit">가입하기</button>
+        </div>-->
+        <button type="submit" id="submit" onClick="submitForm()">가입하기</button>
     </form>
     <div id="footer"></div>
     <script>
