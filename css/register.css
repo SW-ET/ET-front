@@ -27,7 +27,7 @@ select {
 }
 
 /* 중복검사, 이메일 인증 버튼 */
-#registrationForm .form-group .id_check, .email_check{
+#registrationForm .form-group .id_check, .nickname_check{
     background-color: #d1d1d1;
     border: none;
     padding:5px 13px;
