@@ -1,3 +1,4 @@
+// 0514 마지막 수정 파일 
 function previewImage() {
     var preview = document.querySelector('img');
     var file = document.querySelector('input[type=file]').files[0];

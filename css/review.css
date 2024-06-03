@@ -12,6 +12,7 @@ body {
 #first-container{ 
     margin-top: 20px;
     align-items: center; /* 요소들을 세로 방향으로 중앙 정렬, 안 먹음 */
+    height: 50px;
 }
 #first-container p {
     float: left;
@@ -33,6 +34,7 @@ body {
 #second-container {
     display: flex; /* Flexbox 사용 */
     align-items: center; /* 세로 중앙 정렬 */
+    height: 70px;
 }
 
 #second-container #review_title {
@@ -60,7 +62,9 @@ body {
 
 /* 사용자 등록 이미지 */
 #review_image{
-    float: center; /* 안 먹음 */
+    display: flex; /* Flexbox를 사용하여 가로 정렬 */
+            justify-content: center; /* 가로 중앙 정렬 */
+            align-items: center; /* 세로 중앙 정렬 */
 }
 /* 3. third-container 작성자 아이디, 작성일 */
 #third-container div {
@@ -76,13 +80,15 @@ body {
 }
 /* 4. third-container 작성자 아이디, 작성일 */
 #forth-container{
-    float: center; /* 왜 안 되지 <-컨테이너 자체 외치이므로 안 됨, width 줄이기 */
+    float: center; /* 왜 안 되지 <- 컨테이너 자체 외치이므로 안 됨, width 줄이기 */
 }
 
 /* 5. fifth-container 좋아요, 싫어요 */
 #fifth-container {
     display: flex;
     justify-content: center; /* 요소들을 가로로 중앙 정렬 */
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #fifth-container > div { /* 이 부분도 나중에 width 줄여서 가운데로 float 하기 */
