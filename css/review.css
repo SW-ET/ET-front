@@ -1,33 +1,50 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
 body {
     margin: 0; /* 페이지의 기본 여백 제거 */
     padding: 0; /* 페이지의 기본 여백 제거 */
+    font-family: 'Pretendard-Regular';
 }
 #first-container, #second-container, #third-container, #forth-container, #fifth-container {
-    width: 100%;
-    margin-bottom: 10px;
-    border: 1px solid blue;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    margin: 10px 0; /* 컨테이너 사이에 공간 추가 */
+    background-color: #ffffff;
 }
+
+#first-container, #second-container, #third-container, #fifth-container {
+    flex-direction: row;
+}
+
 /* 1. first-container 지역, 삭제버튼 */
 #first-container{ 
     margin-top: 20px;
-    align-items: center; /* 요소들을 세로 방향으로 중앙 정렬, 안 먹음 */
+    align-items: center; /* 요소들을 세로 방향으로 중앙 정렬 */
     height: 50px;
 }
+
 #first-container p {
-    float: left;
+    margin: 0;
     margin-left: 10%;
 }
 
 #first-container input[type="button"] {
-    float: right;
-    margin-right: 10%;
     background-color: #d1d1d1;
     border: none;
-    padding:2px 13px;
+    padding: 2px 13px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 12px;
+    margin: 0;
+    margin-right: 10%;
 }
 
 /* 2. second-container 리뷰 제목, 찜버튼, 수정하기 */
@@ -83,6 +100,11 @@ body {
     float: center; /* 왜 안 되지 <- 컨테이너 자체 외치이므로 안 됨, width 줄이기 */
 }
 
+/* 4. third-container 작성자 아이디, 작성일 */
+#forth-container{
+    float: center; /* 왜 안 되지 <- 컨테이너 자체 외치이므로 안 됨, width 줄이기 */
+}
+
 /* 5. fifth-container 좋아요, 싫어요 */
 #fifth-container {
     display: flex;
@@ -91,37 +113,37 @@ body {
     padding-bottom: 20px;
 }
 
-#fifth-container > div { /* 이 부분도 나중에 width 줄여서 가운데로 float 하기 */
-    display: flex; /* 각 div 요소 안의 요소들을 가로로 나란히 정렬하기 위해 Flexbox 사용 */
-    align-items: center; /* 요소들을 세로 방향으로 중앙 정렬 */
-    margin-right: 50px; /* 각 div 요소들 간의 간격 조절 */
+#fifth-container > div { 
+    display: flex; 
+    flex-direction: column; /* 세로로 나란히 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-right: 50px; 
 }
 
 #fifth-container > div:last-child {
-    margin-right: 0; /* 마지막 div 요소의 오른쪽 여백 제거 */
+    margin-right: 0; 
 }
 #fifth-container .like input[type=checkbox] { 
     display:none;
 }
-  #fifth-container .like input[type=checkbox] + label {
+#fifth-container .like input[type=checkbox] + label {
     display: block;
     width: 40px;
     height: 40px;
     cursor: pointer;
     background: url('/images/before_like.png') left/40px no-repeat;
     background-color: none;
-  }
+}
 #fifth-container .like input[type=checkbox]:checked + label { background-image: url('/images/after_like.png'); }
 #fifth-container .dislike input[type=checkbox] { 
     display:none;
-  }
-  #fifth-container .dislike input[type=checkbox] + label {
+}
+#fifth-container .dislike input[type=checkbox] + label {
     display: block;
     width: 40px;
     height: 40px;
     cursor: pointer;
     background: url('/images/before_dislike.png') left/40px no-repeat;
     background-color: none;
-  }
-  #fifth-container .dislike input[type=checkbox]:checked + label { background-image: url('/images/after_dislike.png'); }
-
+}
+#fifth-container .dislike input[type=checkbox]:checked + label { background-image: url('/images/after_dislike.png'); }
