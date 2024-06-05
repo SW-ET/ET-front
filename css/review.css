@@ -98,11 +98,12 @@ body {
 /* 4. third-container 작성자 아이디, 작성일 */
 #forth-container{
     float: center; /* 왜 안 되지 <- 컨테이너 자체 외치이므로 안 됨, width 줄이기 */
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
-
-/* 4. third-container 작성자 아이디, 작성일 */
-#forth-container{
-    float: center; /* 왜 안 되지 <- 컨테이너 자체 외치이므로 안 됨, width 줄이기 */
+#forth-container p{
+    word-break: normal;
 }
 
 /* 5. fifth-container 좋아요, 싫어요 */

@@ -12,7 +12,7 @@
     <div id="header"></div>
     <div id="first-container"> <!-- 왼쪽: 지역, 오른쪽: 삭제 버튼 -->
         <p id="review_region">수도권 / 경기도</p> <!-- 나중에 변경하기 -->
-        <input type="button" id="delete" value="삭제하기"/> <!-- 로그인한 사용자만 볼 수 있게 하기 -->
+        <input type="button" id="delete" value="삭제하기" onClick="deleteMyReview()"/> <!-- 로그인한 사용자만 볼 수 있게 하기 -->
     </div>
     <div id="second-container"> <!-- 중간: 리뷰 제목, 오른쪽: 찜버튼 -->
         <div id="review_title">어디 방문 후기</div>
@@ -25,7 +25,10 @@
         <div id="user_id">사용자 아이디</div> <!-- 나중에 변경하기-->
         <div id="post_time">작성일(수정일)</div> <!-- 나중에 변경하기-->
     </div>
-    <p id="forth-container" name="review_text">리뷰 내용</p>
+    <div id="forth-container" name="review_text"> <!-- 사용자 등록 텍스트 출력, 나중에 바꾸기 -->
+        <p>리뷰 내용flqbsodyd내용flqbsodyd내용flqbsodyd내용flqbsodyd내용flqbsodyd내용flqbsodyd내용flqbsodyd내용flqbsodyd내용내용flqbsodyd내용flqbsodyd내용flqbsodyd내용flqbsodyd내용내용flqbsodyd내용flqbsodyd내용flqbsodyd내용flqbsodyd내용</p>
+    </div>
+    
     <div id="fifth-container"> <!-- 리뷰 좋아요/싫어요 -->
         <div class="like">
             <input type="checkbox" id="box2"><label for="box2"></label>
