@@ -11,8 +11,12 @@
 <body>
     <div id="header"></div>
     <div id="first-container"> <!-- 왼쪽: 지역, 오른쪽: 삭제 버튼 -->
-        <p id="review_region">수도권 / 경기도</p> <!-- 나중에 변경하기 -->
-        <input type="button" id="delete" value="삭제하기" onClick="deleteMyReview()"/> <!-- 로그인한 사용자만 볼 수 있게 하기 -->
+        <p id="review_region">경기도 / 성남시</p> <!-- 나중에 변경하기 -->
+        <div id="button_group">
+            <input type="button" id="modi_review" value="수정하기" onClick="modifyMyReview()"/> <!-- 로그인한 사용자만 볼 수 있게 하기 -->
+            <input type="button" id="delete_review" value="삭제하기" onClick="deleteMyReview()"/> <!-- 로그인한 사용자만 볼 수 있게 하기 -->
+        </div>
+        
     </div>
     <div id="second-container"> <!-- 중간: 리뷰 제목, 오른쪽: 찜버튼 -->
         <div id="review_title">어디 방문 후기</div>
@@ -39,7 +43,7 @@
             <p>10</p> <!-- 싫어요 수, 추후 변경 -->
         </div>
     </div>
-    <!-- 댓글, 추후 변경 -->
+    <!-- 댓글, 추후 변경
     <div class="card mb-2">
         <div class="card-header bg-light">
                 <i class="fa fa-comment fa"></i> REPLY
@@ -59,6 +63,7 @@
             </ul>
         </div>
     </div>
+    -->
     </div>
     <div id="footer"></div>
 </body>

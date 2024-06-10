@@ -30,21 +30,22 @@ body {
     align-items: center; /* 요소들을 세로 방향으로 중앙 정렬 */
     height: 50px;
 }
-
 #first-container p {
     margin: 0;
     margin-left: 10%;
 }
-
+#first-container #button_group{
+    margin: 0;
+    margin-right: 10%;
+}
 #first-container input[type="button"] {
+    padding: 2px 13px;
     background-color: #d1d1d1;
     border: none;
-    padding: 2px 13px;
     border-radius: 10px;
     cursor: pointer;
     font-size: 12px;
-    margin: 0;
-    margin-right: 10%;
+    margin-left:5px;
 }
 
 /* 2. second-container 리뷰 제목, 찜버튼, 수정하기 */
